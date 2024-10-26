@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Beloved One - Phyu Thwe Soe</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background 0.5s, color 0.5s;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .content {
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    .theme-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: #6a0dad;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+      z-index: 2;
+    }
+
+    /* Theme 1: Romantic Purple & Blue with Hearts and Stars */
+    .theme-1 {
+      background-color: #6a0dad; /* Purple */
+      color: #ffffff;
+    }
+    .theme-1 .content {
+      background-color: #4b0082; /* Darker Purple */
+      color: #e0bbff;
+    }
+    .theme-1 .theme-button {
+      background-color: #8a2be2;
+    }
+    .theme-1::before, .theme-1::after {
+      content: '❤️';
+      font-size: 3em;
+      position: absolute;
+      color: rgba(255, 182, 193, 0.4); /* Light pink hearts */
+    }
+    .theme-1::before {
+      top: 10%;
+      left: 10%;
+    }
+    .theme-1::after {
+      bottom: 15%;
+      right: 15%;
+    }
+
+    /* Theme 2: Futuristic Blue with Circles and Hexagons */
+    .theme-2 {
+      background-color: #001f3f; /* Navy */
+      color: #d6e8ff;
+    }
+    .theme-2 .content {
+      background-color: #1a1a2e; /* Darker Blue */
+      color: #f0e6f6;
+    }
+    .theme-2 .theme-button {
+      background-color: #0074d9; /* Bright Blue */
+    }
+    .theme-2::before, .theme-2::after {
+      content: '⚙️';
+      font-size: 3em;
+      position: absolute;
+      color: rgba(173, 216, 230, 0.5); /* Light Blue */
+    }
+    .theme-2::before {
+      top: 20%;
+      right: 20%;
+    }
+    .theme-2::after {
+      bottom: 20%;
+      left: 25%;
+    }
+  </style>
+</head>
+<body class="theme-1">
+  <div class="content">
+    <h1>For My Beloved One - Phyu Thwe Soe</h1>
+    <p>To you, Phyu Thwe Soe, the one who fills my thoughts every day. My heart beats for you, even though you might not feel the same.</p>
+    <p>With every sunrise, I find myself grateful for simply knowing you. My feelings are a melody, a symphony that plays only for you, bringing warmth even when I can’t be by your side.</p>
+    <p>Distance or fate might separate us, but my admiration and affection will remain untouched. You are my inspiration, my dream, my unspoken happiness.</p>
+  </div>
+
+  <button class="theme-button" onclick="switchTheme()"></button>
+
+  <script>
+    function switchTheme() {
+      document.body.classList.toggle("theme-1");
+      document.body.classList.toggle("theme-2");
+    }
+  </script>
+</body>
+</html>
